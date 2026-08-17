@@ -1,0 +1,156 @@
+.root{
+    --colWidth: 200px;
+    --colHeight: auto;
+}
+
+body{
+    background-color: rgb(19, 21, 27);
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+ol{
+    padding: 0;
+    list-style-type: none;
+    width: 85%;
+    max-width: 85%;
+}
+
+li{
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 15px;
+    background-color: hsl(0, 0%, 97%);
+    margin-bottom: 10px;
+    border: 3px solid hsl(0, 0%, 86%);
+    border-radius: 5px;
+    color:black;
+
+}
+
+li:hover{
+    cursor: pointer;
+    background-color: hsl(0, 0%, 90%);
+}
+
+input{
+    background:rgb(38, 43, 58);
+    border-radius: 7px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid hsl(225, 21%, 9%);
+    min-height: 25px;
+    font-size: 1rem;
+    color:hsl(180, 100%, 97%);
+
+}
+
+button{
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 0px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    background-color: hsl(120, 79%, 49%);
+}
+
+button:hover{
+    background-color: hsl(120, 79%, 39%);
+
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    padding: 100px;
+}
+
+.kanbanContainer{
+    text-align: center;
+    color:hsl(180, 100%, 97%);
+    display: flex;
+    flex-direction: column;
+    font-family: "Trebucht MS", "Arial", "sans-serif";
+    
+
+}
+
+.kanbanBoard{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+
+    width: 100%;
+    max-width: 1700px;
+
+    margin: auto;
+    font-size: 1.4rem;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: start; /*this is to prevent the other table sizes changing when another one does*/
+
+}
+
+.bHeaders,.pHeaders,.cHeaders{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+
+.bHeaders{
+    border: 1px solid rgb(255, 0, 0);
+
+}
+
+.pHeaders{
+    border: 1px solid rgb(255, 166, 0);
+
+}
+
+.cHeaders{
+    border: 1px solid rgb(0, 255, 34);
+    
+}
+
+.bHeader, .cHeader, .pHeader{
+    margin-bottom: 0px;
+}
+
+
+.backLog{
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.inProgress{
+    border: 1px solid rgb(255, 166, 0);
+}
+
+.complete{
+    border: 1px solid rgb(0, 255, 34);
+}
+
+.cancelBtn{
+    background-color: hsl(0, 100%, 50%);
+}
+
+.cancelBtn:hover{
+    background-color: hsl(0, 100%, 40%);
+
+}
+
+.backLog, .inProgress, .complete{
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+

@@ -1,0 +1,41 @@
+.backdrop{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+}
+
+.editor{
+
+    background: rgb(38, 43, 58);
+    padding: 30px;
+    border-radius: 12px;
+
+    z-index: 31;
+    width: 420px;
+    height: 500px;
+    box-shadow: 0px 0px 20px rgba(19, 102, 141, 0.589);
+
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+}
+
+.backdrop, .editor{
+    animation: fadeIn 0.2s ease;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    padding: 100px;
+}
+
+
+@keyframes fadeIn{
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

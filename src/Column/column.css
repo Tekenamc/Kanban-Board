@@ -1,0 +1,19 @@
+.backLog{
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.inProgress{
+    border: 1px solid rgb(255, 166, 0);
+}
+
+.complete{
+    border: 1px solid rgb(0, 255, 34);
+}
+
+.backLog, .inProgress, .complete{
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+

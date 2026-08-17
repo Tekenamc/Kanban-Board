@@ -1,0 +1,29 @@
+.card{
+    border: 6px solid hsl(0, 0%, 80%);
+    background-color: hsl(0, 0%, 18%);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+    margin-bottom: 10px;
+
+    display: grid;
+    grid-template-columns: 40px 1fr;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.startDrag{
+    max-width: 10px;
+
+    background-color: hsl(0, 0%, 100%);
+}
+
+.startDrag:hover{
+    background-color: hsl(0, 0%, 100%);
+}
+
+.text{
+    width: 100%;
+    grid-column: 1 / -1;
+}
