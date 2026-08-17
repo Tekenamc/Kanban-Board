@@ -37,8 +37,6 @@ function App() {
             }
         }
         
-        
-        console.log(over.id);
         setTasks( tasks => {
             const originalPos = tasks.findIndex(task => task.id === active.id);
             const newPos = tasks.findIndex(task => task.id === over.id);

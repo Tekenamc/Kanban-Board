@@ -1,8 +1,7 @@
-import { useDraggable } from "@dnd-kit/core";
 import { useSortable } from "@dnd-kit/sortable";
 import "./Card.css";
 
-
+//Card component represents the tasks
 export const Card = ({ taskName, taskDesc, onClick, taskId }) => {
 
 	const { attributes, listeners, setNodeRef, transform } = useSortable({
@@ -20,6 +19,7 @@ export const Card = ({ taskName, taskDesc, onClick, taskId }) => {
 			ref = { setNodeRef } 
 			style={style}>
 			
+			{/* the draggable bit to make the entire card move */}
 			<button className="startDrag"
 
 				{ ...attributes } 
@@ -27,6 +27,7 @@ export const Card = ({ taskName, taskDesc, onClick, taskId }) => {
 				::
 			</button>
 
+			{/* Crad info */}
 			<div className="text">
 				<h2>{taskName}</h2>
 				<p>{taskDesc}</p>

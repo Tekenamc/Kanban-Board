@@ -31,7 +31,7 @@ export const Column = ({ columnClass, columnStatus }) => {
                             key={task.id} 
 
                             onClick={() =>{
-                                getTempId(task.id);
+                                getTempId(task.id);//Get the id of the task we are viewing to grab it's info
                                 setEdit(true);
                                 setAdding(true);
                             }

@@ -11,12 +11,13 @@ export const Modal = ({ status }) => {
     const tasks = useTaskStore(state => state.tasks);
     const deleteTask = useTaskStore(state => state.deleteTask);
     const updateTask = useTaskStore(state => state.updateTask);
-    const edit = useModalStore(state => state.edit);
+    const edit = useModalStore(state => state.edit);// To know whether a task is being edited or not
     const addTask = useTaskStore(state => state.addTask);
     const setAdding = useModalStore(state => state.setAdding);
     const setEdit = useModalStore(state => state.setEdit);
     const tempId = useModalStore(state => state.tempId);
 
+    //If we are editing a task grab the info of the task 
     useEffect(() => {
         if(edit){
             const task = tasks.find(task => task.id === tempId);
@@ -25,12 +26,9 @@ export const Modal = ({ status }) => {
         }
     }, [tempId])
 
-    useEffect(() => {
-        localStorage.setItem("tasks",JSON.stringify(tasks));
 
-    }, [tasks])
-
-
+    
+    //Finished adding a task
     function handleFinish(){
         if(taskName.trim() === ""){ return }
 
@@ -48,6 +46,7 @@ export const Modal = ({ status }) => {
         
     }
 
+    //Finished editing a task
     function handleEdit(tempId){
         if(taskName.trim() === ""){ return }
 
@@ -57,14 +56,17 @@ export const Modal = ({ status }) => {
 
     }
 
+    //Change state as typing the title of task
     function handleTaskChange(event){
         setTaskName(event.target.value);
     }
 
+    //Change state as typing the description of task
     function handleDescChange(event){
         setTaskDesc(event.target.value);
     }
 
+    //Delete a task
     function handleDeleteTask(tempId){
         deleteTask(tempId);
     }
@@ -76,7 +78,7 @@ export const Modal = ({ status }) => {
                 <input placeholder='Enter Task name' value={taskName} onChange={handleTaskChange}></input><br/>
                 <input type='text' placeholder='Enter description' value={taskDesc} onChange={handleDescChange}></input>
                 <div className='footer'>
-                    {edit ? 
+                    {edit ? //Are we editing a task? if edit true do this:
                         <>
                             <button onClick ={() => {
                                 setAdding(false);
@@ -96,7 +98,7 @@ export const Modal = ({ status }) => {
                             }}>Delete</button>
                         </>
                     
-                    : 
+                    : //If edit false meanning we are nto editing a task do this:
 
                         <>
                             <button onClick ={() => {
