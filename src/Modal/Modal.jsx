@@ -56,6 +56,12 @@ export const Modal = ({ status }) => {
 
     }
 
+        //Delete a task
+    function handleDeleteTask(tempId){
+        deleteTask(tempId);
+    }
+
+
     //Change state as typing the title of task
     function handleTaskChange(event){
         setTaskName(event.target.value);
@@ -66,10 +72,6 @@ export const Modal = ({ status }) => {
         setTaskDesc(event.target.value);
     }
 
-    //Delete a task
-    function handleDeleteTask(tempId){
-        deleteTask(tempId);
-    }
 
     return (
         <div className='backdrop'>
