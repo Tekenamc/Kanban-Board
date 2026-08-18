@@ -56,7 +56,7 @@ export const Modal = ({ status }) => {
 
     }
 
-        //Delete a task
+    //Delete a task
     function handleDeleteTask(tempId){
         deleteTask(tempId);
     }
